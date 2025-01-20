@@ -11,7 +11,7 @@ You can install `dotlock` globally or locally in your project.
 To install `dotlock` globally, run the following command:
 
 ```bash
-npm install -g dotlockF
+npm install -g dotlock
 ```
 ## Usage
 
