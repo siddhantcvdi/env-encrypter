@@ -40,6 +40,8 @@ dotlock decrypt --p your_password
 
 - `-password`: The password used to decrypt the file.
 
+Note: The decryption process will complete even if the password is incorrect, but the file contents will be **corrupted and unreadable**.
+
 ### Use Locally
  You can use `npx` to use this locally
 ```bash
