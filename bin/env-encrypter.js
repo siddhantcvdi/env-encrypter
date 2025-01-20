@@ -11,7 +11,7 @@ program
   .action(async (options) => {
     const envFile = findEnvFile(); 
     if (!envFile) {
-      console.error('Error: .env file not found in the current directory or any parent directories.');
+      console.error('Error: .env file not found in the current directory.');
       process.exit(1);  
     }
     const password = options.password;
@@ -27,7 +27,7 @@ program
   .action(async (options) => {
     const envFile = findEnvEncFile();  
     if (!envFile) {
-      console.error('Error: .env.enc file not found in the current directory or any parent directories.');
+      console.error('Error: .env.enc file not found in the current directory.');
       process.exit(1);  
     }
     const password = options.password;
