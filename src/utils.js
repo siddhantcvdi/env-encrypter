@@ -12,9 +12,9 @@ export const findEnvFile = () => {
   }
 };
 
-export const findEnvEncFile = () => {
+export const findDotLockFile = () => {
   const currentDir = process.cwd();
-  const envFilePath = path.join(currentDir, ".env.enc");
+  const envFilePath = path.join(currentDir, ".dotlock");
 
   if (fs.existsSync(envFilePath)) {
     return envFilePath;

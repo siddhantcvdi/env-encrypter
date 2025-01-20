@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 import { program } from 'commander';
-import path from 'path';
 import { encryptFile, decryptFile } from '../src/encryptDecrypt.js';
-import { findEnvFile, findEnvEncFile} from '../src/utils.js';
+import { findEnvFile, findDotLockFile} from '../src/utils.js';
 
 program
   .command('encrypt')
@@ -23,9 +22,9 @@ program
   .description('Decrypt an encrypted .env file')
   .option('-p, --password <password>', 'Password for decryption')
   .action(async (options) => {
-    const envFile = findEnvEncFile();  
+    const envFile = findDotLockFile();  
     if (!envFile) {
-      console.error('Error: .env.enc file not found in the current directory.');
+      console.error('Error: .dotlock file not found in the current directory.');
       process.exit(1);  
     }
     const password = options.password;
