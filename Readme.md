@@ -4,18 +4,18 @@ A simple command-line tool to encrypt and decrypt your `.env` files using a pass
 
 # Installation
 
-You can install `env-encrypter` globally or locally in your project.
+You can install `dotlock` globally or locally in your project.
 
 ## Global Installation (Recommended)
 
-To install `env-encrypter` globally, run the following command:
+To install `dotlock` globally, run the following command:
 
 ```bash
-npm install -g env-encrypter
+npm install -g dotlockF
 ```
 ## Usage
 
-You can use `env-encrypter` via the command line with the following commands:
+You can use `dotlock` via the command line with the following commands:
 
 ### Encrypt a `.env` File
 
