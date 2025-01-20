@@ -1,0 +1,17 @@
+{
+  "name": "env-encrypter",
+  "version": "1.0.0",
+  "description": "A tool to encrypt and decrypt .env files",
+  "bin": {
+    "envenc": "./bin/env-encrypter.js"
+  },
+  "dependencies": {
+    "commander": "latest"
+  },
+  "type": "module",
+  "author": "Siddhant Chaturvedi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siddhantcvdi/env-encrypter.git"
+  }
+}
