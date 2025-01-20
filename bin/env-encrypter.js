@@ -15,9 +15,7 @@ program
       process.exit(1);  
     }
     const password = options.password;
-    const outputPath = path.resolve(options.output);
-
-    await encryptFile(envFile, password, outputPath);
+    await encryptFile(envFile, password);
   });
 
 program
@@ -31,8 +29,7 @@ program
       process.exit(1);  
     }
     const password = options.password;
-    const outputPath = path.resolve(options.output);
-    await decryptFile(envFile, password, outputPath);
+    await decryptFile(envFile, password);
   });
 
 program.parse(process.argv);

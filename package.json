@@ -1,9 +1,9 @@
 {
-  "name": "env-encrypter",
-  "version": "1.0.0",
-  "description": "A tool to encrypt and decrypt .env files",
+  "name": "dotlock",
+  "version": "1.0.1",
+  "description": "A cli tool to encrypt and decrypt .env files",
   "bin": {
-    "envenc": "./bin/env-encrypter.js"
+    "dotlock": "./bin/env-encrypter.js"
   },
   "dependencies": {
     "commander": "latest"
@@ -13,5 +13,17 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/siddhantcvdi/env-encrypter.git"
-  }
+  },
+  "keywords": [
+    "env",
+    "encryption",
+    "dotenv",
+    "security",
+    "cli",
+    "nodejs",
+    "dotenv-encrypt",
+    "secure-env",
+    "env-encrypter",
+    "encrypt env"
+  ]
 }
