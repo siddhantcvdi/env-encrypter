@@ -24,7 +24,7 @@ program
   .action(async (options) => {
     const envFile = findDotLockFile();  
     if (!envFile) {
-      console.error('Error: .dotlock file not found in the current directory.');
+      console.error('Error: dotlock file not found in the current directory.');
       process.exit(1);  
     }
     const password = options.password;

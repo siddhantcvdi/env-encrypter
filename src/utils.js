@@ -14,7 +14,7 @@ export const findEnvFile = () => {
 
 export const findDotLockFile = () => {
   const currentDir = process.cwd();
-  const envFilePath = path.join(currentDir, ".dotlock");
+  const envFilePath = path.join(currentDir, "dotlock.txt");
 
   if (fs.existsSync(envFilePath)) {
     return envFilePath;
