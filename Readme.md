@@ -13,11 +13,17 @@ To install `dotlock` globally, run the following command:
 ```bash
 npm install -g dotlock
 ```
-## Usage
+# Usage
 
 You can use `dotlock` via the command line with the following commands:
 
-### Encrypt a `.env` File
+## Continuously encrypt a `.env` file
+```bash
+dotlock watch --password your_password
+dotlock watch -p your_password
+```
+This will monitor your `.env` file for changes and will automatically encrypt it when it is saved.
+## Encrypt a `.env` File
 
 Encrypt your `.env` file with a password:
 
@@ -26,10 +32,7 @@ dotlock encrypt --password your_password
 dotlock encrypt -p your_password
 ```
 
-- `-password`: The password used to encrypt the file.
-
-
-### Decrypt an Encrypted `.env` File
+## Decrypt an Encrypted `.env` File
 
 Decrypt a previously encrypted `.env.enc` file with the same password:
 
@@ -38,7 +41,6 @@ dotlock decrypt --password your_password
 dotlock decrypt --p your_password
 ```
 
-- `-password`: The password used to decrypt the file.
 
 Note: The decryption process will complete even if the password is incorrect, but the file contents will be **corrupted and unreadable**.
 

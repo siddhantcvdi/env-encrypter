@@ -1,6 +1,7 @@
 import fs from 'fs/promises';
 import crypto from 'crypto';
 import path from 'path';
+import { setReadOnly, setWritable } from './utils.js';
 
 export const encryptFile = async (filePath, password) => {
   try {
@@ -10,8 +11,10 @@ export const encryptFile = async (filePath, password) => {
     const cipher = crypto.createCipheriv('aes-256-ctr', key, iv);
     const encrypted = Buffer.concat([cipher.update(data, 'utf8'), cipher.final()]);
     const outputData = Buffer.concat([iv, encrypted]);
-    const outputPath = path.join(path.dirname(filePath), 'dotlock.txt');
+    const outputPath = path.join(path.dirname(filePath), 'env.dotlock');
+    setWritable(outputPath);
     await fs.writeFile(outputPath, outputData);
+    setReadOnly(outputPath);
     console.log(`File encrypted and saved to ${outputPath}`);
   } catch (err) {
     console.error('Encryption failed:', err);

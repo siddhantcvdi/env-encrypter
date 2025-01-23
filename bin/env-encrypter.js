@@ -12,7 +12,7 @@ program
   .action(async (options) => {
     const envFile = findEnvFile();
     if (!envFile) {
-      console.error("Error: .env file not found in the current directory.");
+      console.log(chalk.red("Error: .env file not found in the current directory."));
       process.exit(1);
     }
     const password = options.password;
@@ -26,7 +26,7 @@ program
   .action(async (options) => {
     const envFile = findDotLockFile();
     if (!envFile) {
-      console.error("Error: dotlock file not found in the current directory.");
+      console.log(chalk.red("Error: dotlock file not found in the current directory."));
       process.exit(1);
     }
     const password = options.password;
@@ -40,7 +40,7 @@ program
   .action((options) => {
     const envFile = findEnvFile();
     if (!envFile) {
-      console.error("Error: .env file not found in the current directory.");
+      console.log(chalk.red("Error: .env file not found in the current directory."));
       process.exit(1);
     }
     const password = options.password;
